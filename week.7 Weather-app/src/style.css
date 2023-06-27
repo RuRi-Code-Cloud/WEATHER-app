@@ -100,3 +100,17 @@ a {
   color: darksalmon;
   text-decoration: none;
 }
+#search-form {
+  transform: rotate(-45deg);
+
+  position: relative;
+  right: 50px;
+}
+#button {
+  background-color: rgba(243, 135, 113, 0.35);
+  border-color: rgba(243, 135, 113, 0.35);
+}
+#text {
+  background-color: rgba(240, 248, 255, 0.309);
+  color: white;
+}

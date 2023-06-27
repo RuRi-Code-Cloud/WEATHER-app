@@ -44,9 +44,16 @@ function showTemperature(response) {
   );
 }
 
+function search(event) {
+  event.preventDefault();
+  let textElement = document.querySelector("#text");
+  console.log(textElement.value);
+}
 let apiKey = "2b03bfeb040ctdb92faf2af53622202o";
-let city = "Dublin";
+let city = "Riga";
 let apiUrl =
-  "https://api.shecodes.io/weather/v1/current?query=${city}&key=2b03bfeb040ctdb92faf2af53622202o";
+  "https://api.shecodes.io/weather/v1/?query={city}&key={apiKey}&units=metric";
 
 axios.get(apiUrl).then(showTemperature);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", search);
