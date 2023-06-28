@@ -1,14 +1,3 @@
-#background-video {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-}
 body {
   color: rgb(29, 35, 59);
   font-family: "Raleway Dots";
@@ -20,6 +9,21 @@ h1 {
   left: -10px;
   font-size: 50px;
   transform: rotate(-45deg);
+}
+a {
+  color: rgb(174, 183, 194);
+  text-decoration: none;
+}
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
 }
 .word {
   position: relative;
@@ -91,8 +95,4 @@ h1 {
   position: relative;
   bottom: -180px;
   right: 60px;
-}
-a {
-  color: rgb(174, 183, 194);
-  text-decoration: none;
 }
