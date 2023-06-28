@@ -1,13 +1,14 @@
 body {
+  display: block;
   color: rgba(134, 165, 222, 0.458);
   font-family: "Raleway Dots";
   font-size: 25px;
 }
 h1 {
   position: relative;
-  top: 130px;
-  left: -10px;
-  font-size: 50px;
+  top: 90px;
+  left: -40px;
+  font-size: 40px;
   transform: rotate(-45deg);
 }
 a {
@@ -27,19 +28,22 @@ a {
 }
 .word {
   position: relative;
-  bottom: 70px;
+  bottom: 80px;
+  left: 40px;
 }
 .weather {
   position: relative;
-  bottom: 45px;
-  left: 30px;
+  bottom: 155px;
+  left: 80px;
+  font-size: 25px;
 }
 .first-info {
   list-style: none;
   transform: rotate(-45deg);
   position: relative;
-  top: 230px;
-  left: 50px;
+  top: 160px;
+  left: 40px;
+  font-size: 20px;
 }
 .second-info {
   position: relative;
@@ -49,27 +53,31 @@ a {
 .temperature {
   font-size: 110px;
   position: relative;
+  left: 50px;
   bottom: 30px;
 }
 .clock {
   position: relative;
-  left: 5px;
+  left: -25px;
+  top: 30px;
 }
 .procent {
   position: relative;
-  left: 15px;
+  left: -10px;
+  top: 55px;
 }
 .kilometers {
   position: relative;
-  left: 25px;
+  top: 80px;
+  left: 10px;
 }
 .box {
   position: relative;
   top: 100px;
   margin: 0 auto;
   padding: 30px;
-  width: 450px;
-  height: 450px;
+  width: 500px;
+  height: 500px;
   border-radius: 0 50% 50% 50%;
   border: 0.5px solid black;
   transform: rotate(45deg);
@@ -92,6 +100,40 @@ a {
   display: block;
   margin: 0 auto;
   position: relative;
-  bottom: -180px;
+  bottom: -120px;
   right: 60px;
+}
+#search-form {
+  transform: rotate(-45deg);
+  position: relative;
+  right: 50px;
+}
+
+.searching {
+  background-color: rgba(4, 30, 68, 0.397);
+  border: 0.5px solid rgb(140, 210, 248);
+  border-radius: 20px;
+  position: relative;
+  top: 40px;
+  right: 30px;
+  color: rgba(240, 248, 255, 0.55);
+}
+
+#text {
+  background-color: rgba(71, 109, 146, 0.397);
+  color: rgb(140, 210, 248);
+  position: relative;
+  top: 40px;
+  right: 30px;
+  border: 0.5px solid rgb(140, 210, 248);
+}
+
+#icon {
+  opacity: 0.5;
+  position: relative;
+  bottom: 130px;
+  left: 150px;
+}
+.active {
+  color: rgb(87, 133, 197);
 }
