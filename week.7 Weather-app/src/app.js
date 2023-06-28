@@ -30,7 +30,7 @@ function showTemperature(response) {
   humidityElement.innerHTML = response.data.temperature.humidity;
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = response.data.wind.speed;
-  let temperatureElement = document.querySelector("#temp");
+  let temperatureElement = document.querySelector("#heat");
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   let weatherElement = document.querySelector("#type");
   weatherElement.innerHTML = response.data.condition.description;
@@ -42,6 +42,7 @@ function showTemperature(response) {
     `src`,
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
+  console.log(response);
 }
 
 function search(event) {
@@ -49,10 +50,10 @@ function search(event) {
   let textElement = document.querySelector("#text");
   console.log(textElement.value);
 }
-let apiKey = "2b03bfeb040ctdb92faf2af53622202o";
-let city = "Riga";
-let apiUrl =
-  "https://api.shecodes.io/weather/v1/?query={city}&key={apiKey}&units=metric";
+
+let apiKey = `2b03bfeb040ctdb92faf2af53622202o`;
+let city = "Dublin";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(showTemperature);
 let form = document.querySelector("#search-form");
