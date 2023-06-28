@@ -1,14 +1,22 @@
 body {
   display: block;
-  color: bisque;
+  color: rgb(254, 253, 249);
   font-family: "Raleway Dots";
   font-size: 25px;
 }
 h1 {
+  color: rgb(0, 0, 0);
   position: relative;
   top: 90px;
   left: -40px;
   font-size: 40px;
+  transform: rotate(-45deg);
+}
+h2 {
+  position: relative;
+  top: 70px;
+  left: -10px;
+  font-size: 20px;
   transform: rotate(-45deg);
 }
 a {
@@ -41,7 +49,7 @@ a {
   list-style: none;
   transform: rotate(-45deg);
   position: relative;
-  top: 160px;
+  top: 150px;
   left: 40px;
   font-size: 20px;
 }
@@ -111,8 +119,8 @@ a {
 }
 
 .searching {
-  background-color: rgba(246, 207, 183, 0.397);
-  border: 0.5px solid rgba(255, 253, 253, 0.606);
+  background-color: rgba(72, 61, 54, 0);
+  border: 0.5px solid rgba(36, 25, 25, 0.676);
   border-radius: 20px;
   position: relative;
   top: 40px;
@@ -121,11 +129,12 @@ a {
 }
 
 #text {
-  background-color: rgba(246, 207, 183, 0.397);
-  color: white;
+  background-color: rgba(55, 46, 40, 0);
+  color: black;
   position: relative;
   top: 40px;
   right: 30px;
+  border: 0.5px solid rgba(16, 16, 16, 0.685);
 }
 #icon {
   opacity: 0.5;

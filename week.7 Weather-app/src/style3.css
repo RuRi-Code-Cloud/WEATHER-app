@@ -6,9 +6,16 @@ body {
 }
 h1 {
   position: relative;
-  top: 90px;
-  left: -40px;
+  top: 70px;
+  left: -10px;
   font-size: 40px;
+  transform: rotate(-45deg);
+}
+h2 {
+  position: relative;
+  top: 70px;
+  left: -10px;
+  font-size: 20px;
   transform: rotate(-45deg);
 }
 a {
@@ -34,14 +41,14 @@ a {
 .weather {
   position: relative;
   bottom: 155px;
-  left: 80px;
+  left: 60px;
   font-size: 25px;
 }
 .first-info {
   list-style: none;
   transform: rotate(-45deg);
   position: relative;
-  top: 160px;
+  top: 150px;
   left: 40px;
   font-size: 20px;
 }
@@ -113,7 +120,7 @@ a {
 }
 
 .searching {
-  background-color: rgba(246, 207, 183, 0.397);
+  background-color: rgba(80, 79, 78, 0.454);
   border: 0.5px solid rgba(255, 253, 253, 0.606);
   border-radius: 20px;
   position: relative;
@@ -123,7 +130,7 @@ a {
 }
 
 #text {
-  background-color: rgba(246, 207, 183, 0.397);
+  background-color: rgba(80, 79, 78, 0.454);
   color: white;
   position: relative;
   top: 40px;
@@ -137,4 +144,7 @@ a {
 }
 .active {
   color: black;
+}
+input#text::placeholder {
+  color: aliceblue;
 }

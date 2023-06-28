@@ -1,6 +1,6 @@
 body {
   display: block;
-  color: rgba(134, 165, 222, 0.458);
+  color: rgb(134, 165, 222);
   font-family: "Raleway Dots";
   font-size: 25px;
 }
@@ -9,6 +9,13 @@ h1 {
   top: 90px;
   left: -40px;
   font-size: 40px;
+  transform: rotate(-45deg);
+}
+h2 {
+  position: relative;
+  top: 70px;
+  left: -10px;
+  font-size: 20px;
   transform: rotate(-45deg);
 }
 a {
@@ -41,7 +48,7 @@ a {
   list-style: none;
   transform: rotate(-45deg);
   position: relative;
-  top: 160px;
+  top: 150px;
   left: 40px;
   font-size: 20px;
 }
@@ -136,4 +143,7 @@ a {
 }
 .active {
   color: rgb(87, 133, 197);
+}
+input#text::placeholder {
+  color: aliceblue;
 }

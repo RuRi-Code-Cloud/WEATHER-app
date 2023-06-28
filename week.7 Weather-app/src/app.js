@@ -22,8 +22,8 @@ function formatDate(timestamp) {
 }
 
 function showTemperature(response) {
-  document.querySelector("h1").innerHTML =
-    response.data.city + "," + response.data.country;
+  document.querySelector("h1").innerHTML = response.data.city;
+  document.querySelector("h2").innerHTML = response.data.country;
 
   document.querySelector("#humidity").innerHTML =
     response.data.temperature.humidity;
