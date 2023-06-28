@@ -1,3 +1,20 @@
+body {
+  display: block;
+  color: rgb(253, 249, 249);
+  font-family: "Raleway Dots";
+  font-size: 25px;
+}
+h1 {
+  position: relative;
+  top: 90px;
+  left: -40px;
+  font-size: 40px;
+  transform: rotate(-45deg);
+}
+a {
+  color: rgb(211, 92, 62);
+  text-decoration: none;
+}
 #background-video {
   width: 100vw;
   height: 100vh;
@@ -9,44 +26,23 @@
   bottom: 0;
   z-index: -1;
 }
-
-body {
-  color: rgb(1, 54, 79);
-
-  font-family: "Raleway Dots";
-  font-size: 25px;
-}
-h1 {
-  position: relative;
-  top: 100px;
-  left: -20px;
-  font-size: 40px;
-  transform: rotate(-45deg);
-}
-h2 {
-  transform: rotate(-45deg);
-  position: relative;
-  top: 100px;
-  left: -20px;
-  font-size: 40px;
-}
 .word {
   position: relative;
-  bottom: 70px;
-  left: 37px;
+  bottom: 80px;
+  left: 40px;
 }
 .weather {
   position: relative;
-  bottom: 145px;
-  left: 110px;
-  font-size: 20px;
+  bottom: 155px;
+  left: 80px;
+  font-size: 25px;
 }
 .first-info {
   list-style: none;
   transform: rotate(-45deg);
   position: relative;
-  top: 200px;
-  left: 50px;
+  top: 160px;
+  left: 40px;
   font-size: 20px;
 }
 .second-info {
@@ -57,20 +53,23 @@ h2 {
 .temperature {
   font-size: 110px;
   position: relative;
-  left: 30px;
+  left: 50px;
   bottom: 30px;
 }
 .clock {
   position: relative;
-  left: 5px;
+  left: -25px;
+  top: 30px;
 }
 .procent {
   position: relative;
-  left: 15px;
+  left: -10px;
+  top: 55px;
 }
 .kilometers {
   position: relative;
-  left: 25px;
+  top: 80px;
+  left: 10px;
 }
 
 .box {
@@ -78,8 +77,8 @@ h2 {
   top: 100px;
   margin: 0 auto;
   padding: 30px;
-  width: 450px;
-  height: 450px;
+  width: 500px;
+  height: 500px;
   border-radius: 0 50% 50% 50%;
   border: 0.5px solid black;
   transform: rotate(45deg);
@@ -104,49 +103,28 @@ h2 {
   display: block;
   margin: 0 auto;
   position: relative;
-  bottom: -180px;
+  bottom: -120px;
   right: 60px;
 }
-a {
-  color: darksalmon;
-  text-decoration: none;
-}
+
 #search-form {
   transform: rotate(-45deg);
-
   position: relative;
   right: 50px;
 }
 
-.gg-search {
-  box-sizing: border-box;
+.searching {
+  background-color: rgba(246, 207, 183, 0.397);
+  border: 0.5px solid rgba(255, 253, 253, 0.606);
+  border-radius: 20px;
   position: relative;
-  top: 55px;
+  top: 40px;
   right: 30px;
-  display: block;
-  transform: scale(var(--ggs, 1));
-  width: 16px;
-  height: 16px;
-  border: 2px solid;
-  border-radius: 100%;
-  margin-left: -4px;
-  margin-top: -4px;
+  color: rgba(240, 248, 255, 0.55);
 }
-.gg-search::after {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  position: absolute;
-  border-radius: 3px;
-  width: 2px;
-  height: 8px;
-  background: currentColor;
-  transform: rotate(-45deg);
-  top: 10px;
-  left: 12px;
-}
+
 #text {
-  background-color: rgba(240, 248, 255, 0.309);
+  background-color: rgba(246, 207, 183, 0.397);
   color: white;
   position: relative;
   top: 40px;
@@ -156,5 +134,8 @@ a {
   opacity: 0.5;
   position: relative;
   bottom: 130px;
-  left: 135px;
+  left: 150px;
+}
+.active {
+  color: black;
 }

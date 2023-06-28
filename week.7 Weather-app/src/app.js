@@ -22,14 +22,16 @@ function formatDate(timestamp) {
 }
 
 function showTemperature(response) {
-  document.querySelector("h1").innerHTML = response.data.city;
+  document.querySelector("h1").innerHTML =
+    response.data.city + "," + response.data.country;
 
   document.querySelector("#humidity").innerHTML =
     response.data.temperature.humidity;
-  document.querySelector("#wind").innerHTML = response.data.wind.speed;
-  document.querySelector("#heat").innerHTML = Math.round(
-    response.data.temperature.current
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
   );
+  celsiusTemp = response.data.temperature.current;
+  document.querySelector("#heat").innerHTML = Math.round(celsiusTemp);
   document.querySelector("#type").innerHTML =
     response.data.condition.description;
   document.querySelector("#time").innerHTML = formatDate(
@@ -41,8 +43,6 @@ function showTemperature(response) {
     `src`,
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
-
-  document.querySelector("#country").innerHTML = response.data.country;
 }
 
 function search(event) {
@@ -58,5 +58,30 @@ function findCity(event) {
   search(textElement.value);
 }
 
+function changeFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#heat");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+}
+
+function changeCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#heat");
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+}
+
+let celsiusTemp = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", findCity);
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", changeFahrenheit);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", changeCelsius);
