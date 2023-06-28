@@ -22,39 +22,41 @@ function formatDate(timestamp) {
 }
 
 function showTemperature(response) {
-  let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = response.data.city;
-  let countryElement = document.querySelector("#country");
-  countryElement.innerHTML = response.data.country;
-  let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = response.data.temperature.humidity;
-  let windElement = document.querySelector("#wind");
-  windElement.innerHTML = response.data.wind.speed;
-  let temperatureElement = document.querySelector("#heat");
-  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
-  let weatherElement = document.querySelector("#type");
-  weatherElement.innerHTML = response.data.condition.description;
-  let timeElement = document.querySelector("#time");
-  timeElement.innerHTML = formatDate(response.data.time * 1000);
+  document.querySelector("h1").innerHTML = response.data.city;
+
+  document.querySelector("#humidity").innerHTML =
+    response.data.temperature.humidity;
+  document.querySelector("#wind").innerHTML = response.data.wind.speed;
+  document.querySelector("#heat").innerHTML = Math.round(
+    response.data.temperature.current
+  );
+  document.querySelector("#type").innerHTML =
+    response.data.condition.description;
+  document.querySelector("#time").innerHTML = formatDate(
+    response.data.time * 1000
+  );
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     `src`,
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
-  console.log(response);
+
+  document.querySelector("#country").innerHTML = response.data.country;
 }
 
 function search(event) {
-  event.preventDefault();
-  let textElement = document.querySelector("#text");
-  console.log(textElement.value);
+  let apiKey = `2b03bfeb040ctdb92faf2af53622202o`;
+  let city = document.querySelector("#text").value;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
 }
 
-let apiKey = `2b03bfeb040ctdb92faf2af53622202o`;
-let city = "Dublin";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+function findCity(event) {
+  event.preventDefault();
+  let textElement = document.querySelector("#text");
+  search(textElement.value);
+}
 
-axios.get(apiUrl).then(showTemperature);
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", search);
+form.addEventListener("submit", findCity);
