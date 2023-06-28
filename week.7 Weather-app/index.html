@@ -16,6 +16,11 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Raleway+Dots"
     />
+    <link
+      href="https://unpkg.com/css.gg@2.0.0/icons/css/search.css"
+      rel="stylesheet"
+    />
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather-APP</title>
   </head>
@@ -33,19 +38,15 @@
               />
             </div>
             <div class="col-5">
-              <input
-                id="button"
-                type="submit"
-                value="search"
-                class="btn btn-primary"
-              />
+              <i type="submit" class="gg-search"></i>
             </div>
           </div>
         </form>
         <h1>
-          <div id="city">City</div>
-
-          <span id="country">Country</span>
+          <div id="city">
+            City
+            <span id="country">- Country</span>
+          </div>
         </h1>
         <div class="row">
           <div class="col-6">
@@ -60,7 +61,7 @@
           </div>
           <div class="col-6">
             <div class="second-info">
-              <span id="temp" class="temperature">23</span>
+              <span id="heat" class="temperature">23</span>
               <span class="word">°C|°F</span>
               <img
                 src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
